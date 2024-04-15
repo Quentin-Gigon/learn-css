@@ -1,0 +1,235 @@
+/* External style sheet */
+body {
+    /*background elements*/
+    /*fixed color*/
+    /*background-color: grey;*/
+    /*linear gradient*/
+
+    /*
+    background: linear-gradient(to left, skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    */
+
+    /*set image as bakground*/
+    /*background-image: url("ai\ swiss\ landscape.webp");
+    background-size: cover;
+    */
+}
+
+h1 {
+    color: red;
+    font-family: "Press Start 2P", "consolas", sans-serif;
+    border-top-style: 5px solid black;
+    border-bottom-style: 5px solid black;
+    padding: 10px;
+}
+
+p {
+    color: blue;
+    /*font family*/
+    /*common to list several fonts, since if first one is not supported, will fall back on second one*/
+    font-family: "consolas", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 18px;
+
+    /*border styles*/
+    border-style: solid;
+    border width: 5px;
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+}
+
+/*styling a unique id element*/
+#p1 {
+    color: green;
+}
+
+/*styling a class element*/
+.odd {
+    text-align: center;
+    color: yellow;
+}
+
+.even {
+    text-align: center;
+    color: purple;
+}
+
+
+/*margins != padding*/
+#box1 {
+    /*margin is the space outside the border*/
+    margin: 100px;
+    margin-left: auto;
+    margin-right: auto
+        /*padding is the space inside the border*/
+        padding: 100px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    text-align: center;
+
+}
+
+#box2 {
+    margin: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: black;
+    background-color: white;
+    text-align: center;
+}
+
+/*float*/
+img {
+    float: left;
+}
+
+#box3 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    /*position*/
+    position: absolute;
+}
+
+#box4 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    /*position*/
+    position: relative;
+}
+
+#box5 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    /*position*/
+    position: sticky;
+    bottom: 0px;
+}
+
+#box6 {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    /*position*/
+    position: fixed;
+    top: 0;
+}
+
+/*styling pseudoclass links*/
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+/*visited pseudoclass links*/
+a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+/*hover pseudoclass links*/
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/*nth-child pseudoclass lists*/
+li:nth-child(even) {
+    background-color: red;
+}
+
+/*shadows*/
+h2 {
+    text-align: center;
+    text-shadow: 2px 2px 2px red;
+
+}
+
+h2:hover {
+    text-shadow: 5px 5px 5px blue;
+    box-shadow: 10px 10px 10px black;
+}
+
+.fa-house {
+    color: blue;
+}
+.fa-house:hover {
+    color: red;
+}
+
+#box7 {
+    border: 4px solid black;
+    width: 250px;
+    height: 250px;
+    font-size: 50px;
+    text-align: center;
+    background: lightskyblue;
+
+    /*transform*/
+    transform: translate(50px,50px);
+    transform: skew(20deg, 20deg);
+
+}
+
+#box8 {
+    border: 4px solid black;
+    width: 250px;
+    height: 250px;
+    font-size: 50px;
+    text-align: center;
+    background: lightskyblue;
+
+    /*
+    animation: myslide 5s;
+    animation-iteration-count: infinite;
+    animation animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    */
+    /*shorthand for the above*/
+    /*animation: myslide 5s infinite running ease-in-out;*/
+    animation: 3s linear 0s infinite running myrotate;
+    /*animation: 3s linear 0s infinite running myopacity;*/
+}
+
+@keyframes myslide{
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: 0%;
+    }
+}
+
+@keyframes myrotate{
+    100%{transform: rotateZ(360deg)}
+}
+
+@keyframes myopacity{
+    0%{opacity: 0}
+    50%{opacity: 0.5}
+    100%{opacity: 1}
+}
